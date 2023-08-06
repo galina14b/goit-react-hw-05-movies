@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkMovies=self.webpackChunkMovies||[]).push([[347],{347:function(s,e,n){n.r(e);var o=n(184);e.default=function(){return(0,o.jsx)("div",{className:"my-4 mx-5",children:"Ooooops, smth is wrong..."})}}}]);
+//# sourceMappingURL=347.31177ae4.chunk.js.map
