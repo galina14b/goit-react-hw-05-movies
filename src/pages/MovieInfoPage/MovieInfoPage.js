@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, Suspense } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { Link, Outlet } from "react-router-dom";
 
@@ -55,7 +55,9 @@ fetch(`https://api.themoviedb.org/3/movie/${movieID}?language=en-US`, options)
           </ul>
           <hr/>
         </div>
-        <Outlet/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </>
       }
     </div>
