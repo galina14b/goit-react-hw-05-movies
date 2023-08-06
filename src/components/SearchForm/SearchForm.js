@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 const SearchForm = ({ onSubmit }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [ searchParams, setSearchParams] = useSearchParams('');
+  const [ , setSearchParams] = useSearchParams('');
 
 
   const upDateQuery = (query) => {
@@ -14,7 +14,7 @@ const SearchForm = ({ onSubmit }) => {
     }
   }
 
-  function onSubmit() {
+  function Submit() {
     setSearchParams({ "movieName": searchQuery });
     setSearchQuery('');
   };
@@ -22,7 +22,7 @@ const SearchForm = ({ onSubmit }) => {
   return (
     <div className="input-group mb-3">
       <input type="text" className="form-control" value={searchQuery} onChange={(e) => upDateQuery(e.target.value)} placeholder="Movie..." aria-label="Recipient's username" aria-describedby="button-addon2"/>
-      <button className="btn btn-outline-secondary" onClick={onSubmit} type="button" id="button-addon2">Search</button>
+      <button className="btn btn-outline-secondary" onClick={Submit} type="button" id="button-addon2">Search</button>
     </div>
   )
 }
