@@ -22,7 +22,7 @@ const SearchForm = () => {
   
   return (
     <div>
-      <form className="input-group mb-3" onSubmit={(e) => Submit(e)}>
+      <form className="input-group mb-4" onSubmit={(e) => Submit(e)}>
         <input type="text" className="form-control" value={searchQuery} onChange={(e) => upDateQuery(e.target.value)} placeholder="Movie..." aria-label="Recipient's username" aria-describedby="button-addon2"/>
         <button className="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
       </form>
